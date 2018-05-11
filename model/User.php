@@ -5,12 +5,10 @@ Class User{
 		$sql = "SELECT * FROM `user` WHERE `nik` = '$nik' AND `password`='$pass'";
 		$query = mysql_query($sql);
 		$temp = mysql_fetch_array($query);
-		$status = $temp['status'];
-		$id = $temp['user_id'];
-		setcookie("id_user",$id);
-		setcookie("status",$status);
-		$num = mysql_num_rows($query);
-		return $num;
+		$log['num'] = mysql_num_rows($query);
+		$log['id'] = $temp['user_id'];
+		$log['stat'] = $temp['status'];
+		return $log;
 	}
 
 	function logout(){

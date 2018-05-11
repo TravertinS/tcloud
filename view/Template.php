@@ -1,6 +1,6 @@
 <?php
 class Template{
-	
+
 	function page($ct,$title){
 		$hd = "
 		<!DOCTYPE HTML>
@@ -33,7 +33,7 @@ class Template{
 		$sc = $hd.$ct.$ft;
 		return $sc;
 	}
-	
+
 	function wrapper($ct){
 		$hd = "
 			<div id='wrapper'>
@@ -43,9 +43,9 @@ class Template{
 		";
 		$sc = $hd.$ct.$ft;
 		return $sc;
-		
+
 	}
-	
+
 	function main_a($ct){
 		$hd = "
 		<div id='main'>
@@ -57,9 +57,9 @@ class Template{
 		";
 		$sc = $hd.$ct.$ft;
 		return $sc;
-		
+
 	}
-	
+
 	function sidebar($ct){
 		$hd = "
 			<div id='sidebar'>
@@ -73,8 +73,8 @@ class Template{
 		$sc = $hd.$ct.$ft;
 		return $sc;
 	}
-		
-	
+
+
 	function headerm($ct){
 		$sc = "
 		<header id='header'>
@@ -83,9 +83,9 @@ class Template{
 
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function banner(){
 		$sc = "
 		<section id='banner'>
@@ -106,9 +106,9 @@ class Template{
 		</section>
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function section1(){
 		$sc = "
 		<section>
@@ -148,9 +148,9 @@ class Template{
 		</section>
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function section2(){
 		$sc = "
 		<section>
@@ -210,9 +210,9 @@ class Template{
 			</section>
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function search(){
 		$sc = "
 		<section id='search' class='alt'>
@@ -222,9 +222,9 @@ class Template{
 		</section>
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function menu(){
 		$sc = "
 			<nav id='menu'>
@@ -262,9 +262,9 @@ class Template{
 			</nav>
 		";
 		return $sc;
-		
+
 	}
-	
+
 	function section3(){
 		$sc = "
 		<section>
@@ -291,7 +291,7 @@ class Template{
 		</section>
 		";
 		return $sc;
-		
+
 	}
 		function section4(){
 		$sc = "
@@ -309,7 +309,7 @@ class Template{
 		</section>
 		";
 		return $sc;
-		
+
 	}
 		function footer(){
 		$sc = "
@@ -318,7 +318,7 @@ class Template{
 		</footer>
 		";
 		return $sc;
-		
+
 	}
 	function left_sidebar_pic(){
 		$sc = "
@@ -347,7 +347,7 @@ class Template{
 		";
 		return $sc;
 	}
-	
+
 	function menu_tl_migrasi(){
 	$sc = "
 		<nav id='menu'>
@@ -365,13 +365,13 @@ class Template{
 				</li>
 				<li><a href='dispath_migrasi.php'>Dispath Order</a></li>
 				<li><a href='man_aggota_migrasi.php'>Manajemen anggota</a></li>
-				<li><a href='home_tl_migrasi.php'>Logout</a></li>
+				<li><a href='auten_user.php?id=2'>Logout</a></li>
 			</ul>
 		</nav>
 	";
 	return $sc;
 	}
-	
+
 	function menu_agt_migrasi(){
 	$sc = "
 		<nav id='menu'>
@@ -387,7 +387,7 @@ class Template{
 	";
 	return $sc;
 	}
-	
+
 	function menu_survey(){
 	$sc = "
 		<nav id='menu'>
@@ -403,13 +403,13 @@ class Template{
 						<li><a href='dashboard_project.php'>Dashboard Project</a></li>
 					</ul>
 				</li>
-				<li><a href='#'>Logout</a></li>
+				<li><a href='#'>auten_user.php?id=2</a></li>
 			</ul>
 		</nav>
 	";
 	return $sc;
 	}
-	
+
 	function menu_cons(){
 	$sc = "
 		<nav id='menu'>
@@ -425,7 +425,7 @@ class Template{
 	";
 	return $sc;
 	}
-	
+
 	function menu_admin(){
 	$sc = "
 		<nav id='menu'>
@@ -447,7 +447,7 @@ class Template{
 	";
 	return $sc;
 	}
-	
-	
+
+
 }
 ?>

@@ -12,21 +12,21 @@ if ($id == 1){
 	$nik = $_POST['nik'];
 	$pwd =$_POST['pwd'];
 	$login = $user->login($nik,$pwd);
-	$status = $_COOKIE['status'];
+	$status = $login['stat'];
+	setcookie('id_user',$login['id']);
 	echo $login;
-	if($login != 0){
+	if($login['num'] != 0){
+		$list_user = $user->show();
 		if ($status == "migrasi"){
-			header( "refresh:2;url=home_agt_migrasi.php" );
+			header("location: home_agt_migrasi.php");
 		}else if ($status == "tl_migrasi"){
-			header( "refresh:2;url=home_tl_migrasi.php" );
+			header("location: home_tl_migrasi.php");
 		}
 	}else{
 		header("location: Login.php?err=1");
 	}
-}else if(id == 2){
-	setcookie("id_user","");
-	setcookie("status","");
-	header( "refresh:2;url=login.php?err=0" );
+}else if($id == 2){
+	$user->logout();
 }
 
 ?>
