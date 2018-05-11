@@ -12,7 +12,13 @@ Class User{
 		$num = mysql_num_rows($query);
 		return $num;
 	}
-	
+
+	function logout(){
+		setcookie("id_user","");
+		setcookie("status","");
+		header( "refresh:2;url=login.php?err=0" );
+	}
+
 	function add($nik,$nama,$status,$pwd,$id_cmdf){
 		if ($nik != "" && $nama != "" && $status != "" && $pwd != "" && $id_cmdf != "")
 		{
@@ -25,15 +31,15 @@ Class User{
 			$resul[1] = 0;
 			$resull[2] = "Lengkapi Data Terlebih Dahulu";
 		}
-	  
+
 	}
-	
+
 	function show($filter,$content){
 		$sql = "SELECT * FROM `user` WHERE `$filter` = '$content'";
 		$query = mysql_query($sql);
 		return $query;
 	}
-	
+
 	function show_all(){
 		$sql = "SELECT * FROM `user`";
 		$query = mysql_query($sql);

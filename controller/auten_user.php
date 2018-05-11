@@ -16,13 +16,17 @@ if ($id == 1){
 	echo $login;
 	if($login != 0){
 		if ($status == "migrasi"){
-			header("location: home_agt_migrasi.php");
+			header( "refresh:2;url=home_agt_migrasi.php" );
 		}else if ($status == "tl_migrasi"){
-			header("location: home_tl_migrasi.php");
+			header( "refresh:2;url=home_tl_migrasi.php" );
 		}
 	}else{
 		header("location: Login.php?err=1");
 	}
+}else if(id == 2){
+	setcookie("id_user","");
+	setcookie("status","");
+	header( "refresh:2;url=login.php?err=0" );
 }
 
 ?>
