@@ -357,10 +357,10 @@ class Template{
 			<ul>
 				<li><a href='home_tl_migrasi.php'>Home</a></li>
 				<li>
-					<span class='opener'>Dashboard</span>
+					<span class='opener'>Database</span>
 					<ul>
-						<li><a href='dashboard_migrasi.php'>Dashboard Migrasi</a></li>
-						<li><a href='dashboard_hi_migrasi.php'>Dashboard HI Migrasi</a></li>
+						<li><a href='dashboard_migrasi.php'>Migrasi</a></li>
+						<li><a href='dashboard_hi_migrasi.php'>HI Migrasi</a></li>
 					</ul>
 				</li>
 				<li><a href='dispath_migrasi.php'>Dispath Order</a></li>

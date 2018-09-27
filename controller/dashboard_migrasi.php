@@ -7,18 +7,20 @@ $temp = new Template;
 $tab = new Table;
 $ele = new Elements;
 
-$title[1] = "ID MIGRASI";
-$title[2] = "ID DOSSIER";
-$title[3] = "NAMA";
-$title[4] = "ALAMAT";
-$title[5] = "STO";
-$title[6] = "VALIDASI LAPANGAN";
-$title[7] = "TANGGAL UPDATE";
-$title[8] = "KETERANGAN";
+$title[1] = "SND";
+$title[2] = "NAMA";
+$title[3] = "ALAMAT";
+$title[4] = "STO";
+$title[5] = "VALIDASI LAPANGAN";
+$title[6] = "TANGGAL UPDATE";
+$title[7] = "MITRA";
+$title[8] = "PIC";
+$title[9] = "STATUS";
+$title[10] = "KETERANGAN";
 
 $i = 1;
 $header = "";
-while($i <= 8)
+while($i <= 10)
 {
 	$content = "<b><font color='white' size='2px'>".$title[$i]."</font></b>";
 	$header = $header.$tab->table_hdct1($content,0,0);
