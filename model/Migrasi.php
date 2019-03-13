@@ -1,3 +1,6 @@
 <?php
+Class Migrasi{
+  function
 
+}
 ?>
